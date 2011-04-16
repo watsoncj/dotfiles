@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/lib/plymouth/themes/ubuntu-logo'
+let g:netrw_dirhist_2='/home/cwatson/dev/splash/unifocus-plymouth-theme/DEBIAN'
+let g:netrw_dirhist_3='/home/cwatson/dev/deployer-dashboard/app/views/deploy'
+let g:netrw_dirhist_4='/home/cwatson/dev/watson/scripts'
+let g:netrw_dirhist_5='/home/cwatson/dev/watson/build'
+let g:netrw_dirhist_6='/home/cwatson/.gconf/apps/gnome-terminal/profiles/Default'
+let g:netrw_dirhist_7='/home/cwatson/.zsh'
