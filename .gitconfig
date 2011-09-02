@@ -1,6 +1,6 @@
 [user]
-	name = cwatson
-	email = cwatson@unifocus.com
+	name = Casey Watson
+	email = cwatson@localmatters.com
 [color]
 	diff = auto
     status = auto
@@ -40,10 +40,7 @@
 [github]
 	user = watsoncj
 	token = 79d8ee73dc1ab440403ac085b497147b
-[giggle]
-	main-window-maximized = false
-	main-window-geometry = 570x371+1829+382
-	history-view-vpane-position = 75
-	file-view-vpane-position = 75
-	main-window-view = HistoryView
-	file-view-hpane-position = 306
+[push]
+	default = current
+[http]
+	sslverify = false
