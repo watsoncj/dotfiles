@@ -1,6 +1,7 @@
 export PATH="$HOME/.rbenv/bin:$HOME/bin:/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 export MAVEN_OPTS="-XX:MaxPermSize=512m -Xmx1024M"
 #export MAVEN_OPTS="-XX:MaxPermSize=512m -Xmx1024M -DsocksProxyHost=127.0.0.1 -DsocksProxyPort=9088"
+
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 export JAVA_HOME=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
@@ -15,15 +16,6 @@ alias mvn-debug="mvn -Dmaven.surefire.debug=\"-Xdebug -Xrunjdwp:transport=dt_soc
 
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-mvnstatus() {
-  status=`mvn $@`
-  echo $? > ~/.mvn_status
-}
-DEPLOY="$HOME/dev/deploy/deploy.sh faraday"
-alias deploy-cc="$DEPLOY stop-tomcat-cc deploy-cc && rebel_sync && $DEPLOY start-tomcat-cc"
-alias deploy-ccws="$DEPLOY stop-tomcat-cc deploy-ccws && rebel_sync && $DEPLOY start-tomcat-cc"
-alias bounce="$DEPLOY stop-tomcat-cc && rebel_sync && $DEPLOY start-tomcat-cc"
 
 # load bash completions, shouldn't be necessary once bash is updated
 safe_source() {
