@@ -1,5 +1,0 @@
-DEPLOY_HOST="faraday"
-DEPLOY="$HOME/dev/deploy/deploy.sh $DEPLOY_HOST"
-alias deploy-cc="$DEPLOY stop-tomcat-cc deploy-cc && rebel_sync && $DEPLOY start-tomcat-cc"
-alias deploy-ccws="$DEPLOY stop-tomcat-cc deploy-ccws && rebel_sync && $DEPLOY start-tomcat-cc"
-alias bounce="$DEPLOY stop-tomcat-cc && rebel_sync && $DEPLOY start-tomcat-cc"
