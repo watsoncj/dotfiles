@@ -1,0 +1,4 @@
+rebel_sync() {
+  rsync ~/dev/conference-center/ -rvza --exclude="persistence.xml" --exclude=".git" -e "ssh" --delete faraday:~/cc_root/
+  rsync ~/dev/api/ccws/ -rvza --exclude="persistence.xml" --exclude=".git" -e "ssh" --delete faraday:~/ccws_root/
+}

@@ -1,0 +1,1 @@
+alias homesick="$HOME/.homeshick"

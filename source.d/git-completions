@@ -1,0 +1,5 @@
+# brew install git git-flow
+safe_source /usr/local/etc/bash_completion.d/git-completion.bash
+safe_source /usr/local/etc/bash_completion.d/git-flow-completion.bash
+safe_source /usr/local/etc/bash_completion.d/git-prompt.sh
+
