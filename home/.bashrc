@@ -1,14 +1,4 @@
-export PATH="/usr/local/Cellar/postgresql//9.2.3/bin:\
-/usr/local/share/npm/bin:\
-/usr/local/Cellar/bash/4.2.39/bin/bash:\
-$HOME/.rbenv/bin:\
-$HOME/bin:\
-/Applications/Postgres.app/Contents/MacOS/bin:\
-$PATH"
-
-
-
-shopt -s histappend
+export PATH="$HOME/bin:/usr/local/bin:$HOME/.rbenv/bin:$PATH"
 
 safe_source() {
   if [ -f "$1" ]; then
