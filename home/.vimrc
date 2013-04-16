@@ -23,6 +23,7 @@ Bundle 'scrooloose/nerdtree.git'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
+Bundle 'tComment'
 " non github repos
 Bundle 'git://git.wincent.com/command-t.git'
 " ...
@@ -60,6 +61,9 @@ nnoremap ; :
 
 vmap Q gq
 nmap Q gqap
+
+" tComment remapping
+"map <leader>c <c-_><c-_>
 
 cmap w!! w !sudo tee % >/dev/null
 
