@@ -1,6 +1,7 @@
 let mapleader = ","
 nmap <silent> <leader>n :NERDTree<cr>
 set nocompatible               " be iMproved
+filetype on                    " workaround to return zero exit status
 filetype off                   " required!
 
 syntax on
@@ -50,7 +51,7 @@ set backspace=indent,eol,start
 
 set list
 "set listchars=tab:>.,trail:.,extends:#,nbsp:.
-set listchars=tab:▸\ ,eol:¬
+"set listchars=tab:▸\ ,eol:¬
 
 autocmd filetype html,xml set listchars-=tab:>.
 
