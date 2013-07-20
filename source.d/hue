@@ -1,2 +1,5 @@
-eval "$($HOME/dev/hue/bin/hue init -)"
-export DEPLOY_DIR=$HOME/dev/deploy/
+if [ -f $HOME/dev/hue/bin/hue ]
+then
+  eval "$($HOME/dev/hue/bin/hue init -)"
+  export DEPLOY_DIR=$HOME/dev/deploy/
+fi
