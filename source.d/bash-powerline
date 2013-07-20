@@ -1,4 +1,1 @@
-if [ -f ~/.bash-powerline.sh ]
-then
-  . ~/.bash-powerline.sh
-fi
+safe_source  ~/.bash-powerline.sh

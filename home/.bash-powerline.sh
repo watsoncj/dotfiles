@@ -4,6 +4,7 @@ __powerline() {
 
     # Unicode symbols
     PS_SYMBOL_DARWIN=''
+    PS_SYMBOL_DARWIN='$'
     PS_SYMBOL_LINUX='$'
     PS_SYMBOL_OTHER='%'
     GIT_BRANCH_SYMBOL='⑂ '
@@ -102,9 +103,9 @@ __powerline() {
             local BG_EXIT="$BG_RED"
         fi
 
-        PS1="$BG_BASE1$FG_BASE3 \w $RESET"
+        PS1="$BG_GREEN$FG_BASE02 \w $RESET"
         PS1+="$BG_BLUE$FG_BASE3$(__git_branch)$RESET"
-        PS1+="$BG_EXIT$FG_BASE3 $PS_SYMBOL $RESET "
+        PS1+="$BG_EXIT$FG_BASE02 $PS_SYMBOL $RESET "
     }
 
     PROMPT_COMMAND=ps1
