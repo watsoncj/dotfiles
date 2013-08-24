@@ -1,1 +1,2 @@
-alias homesick="$HOME/.homeshick"
+alias homeshick="~/.homesick/repos/homeshick/home/.homeshick"
+alias homesick=homeshick
