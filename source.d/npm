@@ -1,1 +1,9 @@
-export PATH=$PATH:/usr/local/share/npm/bin
+npm_bin=/usr/local/share/npm/bin
+if [ -d "$npm_bin" ]; then
+  export PATH=$PATH:$npm_bin
+fi
+
+# grunt completions
+if [ -f "$npm_bin/grunt" ]; then
+ eval "$(grunt --completion=bash)"
+fi
