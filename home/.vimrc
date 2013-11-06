@@ -5,8 +5,6 @@ set nocompatible               " be iMproved
 "filetype on                    " workaround to return zero exit status
 "filetype off                   " required!
 
-syntax on
-
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
@@ -23,10 +21,33 @@ Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'tComment'
 Bundle 'git://git.wincent.com/command-t.git'
+
+" ag
 " brew install the_silver_searcher
 Bundle 'rking/ag.vim'
+nnoremap <silent> <leader>as :AgFromSearch<CR>
+nnoremap <leader>ag :Ag<space>
 
-filetype plugin indent on     " required!
+" syntastic
+Bundle 'Syntastic'
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_loc_list=1
+
+" diffchanges
+Bundle 'diffchanges'
+nnoremap <leader>df :DiffChangesDiffToggle<CR>
+
+Bundle 'fugitive.vim'
+
+" coffeescript
+Bundle 'kchmck/vim-coffee-script'
+
+" ZoomWin
+Bundle 'regedarek/ZoomWin'
+
+syntax enable
+"filetype plugin indent on     " required!
+"filetype on
 set nu
 set expandtab
 set tabstop=4
@@ -51,9 +72,3 @@ set number
 set showmatch
 set ignorecase
 set smartcase
-
-" ---------------
-" Ag.vim
-" ---------------
-nnoremap <silent> <leader>as :AgFromSearch<CR>
-nnoremap <leader>ag :Ag<space>
