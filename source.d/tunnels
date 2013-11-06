@@ -1,0 +1,2 @@
+alias tunnel-forinf2="ssh -f -D 2000 forinf2.ecovate.com -N"
+alias tunnel-laxinf2="ssh -f -D 2001 laxinf2.ecovate.com -N"
