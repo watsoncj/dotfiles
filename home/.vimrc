@@ -22,6 +22,10 @@ Bundle 'FuzzyFinder'
 Bundle 'tComment'
 Bundle 'git://git.wincent.com/command-t.git'
 
+" ctrlp
+Bundle 'ctrlp.vim'
+nnoremap <leader>f :CtrlP<CR>
+
 " ag
 " brew install the_silver_searcher
 Bundle 'rking/ag.vim'
@@ -72,3 +76,22 @@ set number
 set showmatch
 set ignorecase
 set smartcase
+set mouse=a
+
+" edit this file
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
+" learn vimscript the hard way
+nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
+nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>
+inoremap jk <esc>
+inoremap <esc> <nop>
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
