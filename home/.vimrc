@@ -22,6 +22,22 @@ Bundle 'FuzzyFinder'
 Bundle 'tComment'
 Bundle 'git://git.wincent.com/command-t.git'
 
+Bundle 'inkpot'
+colorscheme inkpot
+set background=dark
+hi String gui=NONE guifg=#ffcd8b guibg=NONE ctermbg=NONE
+
+
+Bundle 'Indent-Guides'
+let g:indent_guides_auto_colors = 0
+let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
+hi IndentGuidesEven  ctermbg=235
+"hi IndentGuidesOdd ctermbg=61
+"let g:indent_guides_start_level=2
+"hi IndentGuidesOdd  guibg=red   ctermbg=3
+"hi IndentGuidesEven guibg=green ctermbg=4
+nnoremap <leader>i :IndentGuidesToggle<CR>
+
 " ctrlp
 Bundle 'ctrlp.vim'
 nnoremap <leader>f :CtrlP<CR>
@@ -35,7 +51,7 @@ nnoremap <leader>ag :Ag<space>
 " syntastic
 Bundle 'Syntastic'
 let g:syntastic_enable_signs=1
-let g:syntastic_auto_loc_list=1
+"let g:syntastic_auto_loc_list=1
 
 " diffchanges
 Bundle 'diffchanges'
@@ -54,7 +70,8 @@ syntax enable
 "filetype on
 set nu
 set expandtab
-set tabstop=4
+set tabstop=2
+"set tabstop=4
 set shiftwidth=2
 set backspace=indent,eol,start
 set list lcs=trail:·,tab:»·
@@ -62,6 +79,8 @@ hi NonText ctermfg=1 guifg=blue
 hi SpecialKey ctermfg=2 guifg=grey
 set pastetoggle=<F2>
 nnoremap ; :
+nnoremap <leader>q :q<cr>
+nnoremap <leader>w :w<cr>
 vmap Q gq
 nmap Q gqap
 cmap w!! w !sudo tee % >/dev/null
@@ -77,6 +96,11 @@ set showmatch
 set ignorecase
 set smartcase
 set mouse=a
+" make yank work with system clipboard
+set clipboard=unnamed
+nnoremap x  "_x
+nnoremap X  "_X
+nnoremap <del>  "_x
 
 " edit this file
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
