@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+set -e
+
+if [ -f "/usr/local/bin/brew" ]; then
+  echo "brew found"
+else
+  ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)"
+fi
+
+brew tap phinze/homebrew-cask
+brew install brew-cask
+brew cask install iterm2
+brew cask install adium
+brew cask install gifrocket
+brew cask install intellij-idea-ultimate
+brew cask install readytalk
+brew cask install vmware-fusion
+brew cask install dropbox
+brew cask install spectacle
+brew cask install google-chrome
+brew cask install xquartz
+brew cask install rstudio
+brew cask install rescuetime
+brew cask install rdio
+brew cask install proximity
+
+brew install vim
+brew install git
+brew install ag
+brew install node
+brew install coreutils
