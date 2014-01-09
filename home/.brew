@@ -23,9 +23,11 @@ brew cask install rstudio
 brew cask install rescuetime
 brew cask install rdio
 brew cask install proximity
+brew cask install evernote
 
 brew install vim
 brew install git
 brew install ag
 brew install node
 brew install coreutils
+brew install rbenv ruby-build
