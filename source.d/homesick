@@ -1,2 +1,1 @@
-alias homeshick="~/.homesick/repos/homeshick/home/.homeshick"
-alias homesick=homeshick
+source $HOME/.homesick/repos/homeshick/homeshick.sh

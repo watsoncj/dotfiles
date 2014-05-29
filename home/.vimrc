@@ -1,92 +1,40 @@
-scriptencoding utf-8
-let mapleader = ","
-nmap <silent> <leader>n :NERDTree<cr>
-set nocompatible               " be iMproved
-"filetype on                    " workaround to return zero exit status
-"filetype off                   " required!
-
-set t_Co=256
-
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
-
-" My Bundles here:
-" original repos on github
-Bundle 'tpope/vim-fugitive'
+Bundle 'icalendar.vim'
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'tpope/vim-rails.git'
 Bundle 'scrooloose/nerdtree.git'
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-Bundle 'tComment'
 Bundle 'bling/vim-airline'
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme = 'jellybeans'
-
-" colors
-Bundle 'flazz/vim-colorschemes'
-set background=dark
-colorscheme jellybeans
-"hi String gui=NONE guifg=#ffcd8b guibg=NONE ctermbg=NONE
-
-
+"Bundle 'flazz/vim-colorschemes'
 Bundle 'Indent-Guides'
-let g:indent_guides_auto_colors = 0
-let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
-hi IndentGuidesEven  ctermbg=235
-"hi IndentGuidesOdd ctermbg=61
-let g:indent_guides_start_level=2
-"hi IndentGuidesOdd  guibg=red   ctermbg=3
-"hi IndentGuidesEven guibg=green ctermbg=4
-nnoremap <leader>i :IndentGuidesToggle<CR>
-
-" ctrlp
 Bundle 'ctrlp.vim'
-nnoremap <leader>f :CtrlP<CR>
-
-" ag
-" brew install the_silver_searcher
 Bundle 'rking/ag.vim'
-nnoremap <silent> <leader>as :AgFromSearch<CR>
-nnoremap <leader>ag :Ag<space>
-
-" syntastic
 Bundle 'Syntastic'
-let g:syntastic_enable_signs=1
-let g:syntastic_auto_loc_list=1
+Bundle 'vim-coffee-script'
+Bundle 'editorconfig/editorconfig-vim'
+Bundle 'MarcWeber/vim-addon-local-vimrc'
+Bundle 'jellybeans.vim'
 
-" diffchanges
-"Bundle 'diffchanges'
-"nnoremap <leader>df :DiffChangesDiffToggle<CR>
+colorscheme jellybeans
 
-Bundle 'fugitive.vim'
-
-" coffeescript
-Bundle 'kchmck/vim-coffee-script'
-
-" ZoomWin
-Bundle 'regedarek/ZoomWin'
-
+let mapleader = ","
 syntax enable
-"filetype plugin indent on     " required!
-"filetype on
+filetype plugin indent on     " required!
+set nocompatible
+set background=dark
+"let g:jellybeans_use_lowcolor_black = 0
+set t_Co=256
 set nu
 set expandtab
 set tabstop=2
-"set tabstop=4
 set shiftwidth=2
 set backspace=indent,eol,start
 set list lcs=trail:·,tab:»·
-"hi NonText ctermfg=1 guifg=blue
-"hi SpecialKey ctermfg=2 guifg=grey
 set pastetoggle=<F2>
 nnoremap ; :
 nnoremap <leader>q :q<cr>
 nnoremap <leader>w :w<cr>
-"nnoremap <leader><leader> <ctrl>w
 vmap Q gq
 nmap Q gqap
 cmap w!! w !sudo tee % >/dev/null
@@ -102,6 +50,7 @@ set showmatch
 set ignorecase
 set smartcase
 set mouse=a
+
 " make yank work with system clipboard
 set clipboard=unnamed
 nnoremap x  "_x
@@ -125,3 +74,19 @@ inoremap <up> <nop>
 inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
+nnoremap <leader>f :CtrlP<CR>
+nnoremap <leader>i :IndentGuidesToggle<CR>
+nnoremap <silent> <leader>as :AgFromSearch<CR>
+nnoremap <leader>ag :Ag<space>
+nmap <silent> <leader>n :NERDTreeToggle<cr>
+
+autocmd! BufRead,BufNewFile *.ics setfiletype icalendar
+
+let g:indent_guides_enable_on_vim_startup = 1
+let g:syntastic_enable_signs=1
+      let g:syntastic_auto_loc_list=1
+
+"let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme = 'jellybeans'
