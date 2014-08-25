@@ -1,3 +1,0 @@
-if [ "$(uname)" == "Darwin" ]; then
-  alias ls="ls --color=always"
-fi

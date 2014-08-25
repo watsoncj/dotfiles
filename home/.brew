@@ -25,7 +25,7 @@ brew cask install rdio
 brew cask install proximity
 brew cask install evernote
 
-brew install vim
+brew install vim --override-system-vi
 brew install git
 brew install ag
 brew install node
