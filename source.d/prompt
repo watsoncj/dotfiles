@@ -1,4 +1,8 @@
 # brew install git
 if hash __git_ps1 > /dev/null 2>&1; then
-  PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
+  if [ "$HOSTNAME" = MC02LL4NGFH00 ]; then
+    PS1='$(tput setaf 2)\W$(tput sgr0)$(__git_ps1 " (%s)")\$ '
+  else
+    PS1='$(tput setaf 1)\h$(tput sgr0) $(tput setaf 3)\W$(tput sgr0)$(__git_ps1 " (%s)")\$ '
+  fi
 fi
